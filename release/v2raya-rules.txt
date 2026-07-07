@@ -1,0 +1,43 @@
+default: direct
+
+# block from subscription
+# routeOrder: block-proxy-direct
+domain(geosite:win-spy, geosite:category-ads) -> block
+
+# local/direct exceptions kept from current OpenWrt setup
+# block QUIC / UDP 443 so TCP-only VLESS Reality handles HTTPS
+network(udp) && port(443) -> block
+network(udp) -> direct
+
+# fast path: Cloudflare/CDN
+domain(geosite:cloudflare) -> proxy
+ip(geoip:cloudflare, geoip:cloudfront) -> proxy
+
+# fast path: Yandex
+domain(geosite:yandex) -> direct
+ip(geoip:yandex) -> direct
+
+# fast path: Telegram
+domain(geosite:telegram) -> proxy
+ip(geoip:telegram) -> proxy
+
+# fast path: Instagram/Meta
+domain(geosite:meta) -> proxy
+ip(geoip:facebook) -> proxy
+
+# fast path: YouTube/Google
+domain(geosite:youtube, geosite:google) -> proxy
+ip(geoip:google) -> proxy
+
+# proxy before broad direct: categories that contain RU/SU/RF or blocked domains
+domain(geosite:steam, geosite:antifilter-download-community, geosite:ru-blocked) -> proxy
+ip(geoip:ru-blocked) -> proxy
+
+# direct from subscription: exact categories before broad TLD fallback
+domain(geosite:ru-available-only-inside, geosite:alibaba) -> direct
+
+# proxy after broad direct: non-RU service categories and exact custom domains
+domain(domain:lampa.stream, domain:jacred.xyz, domain:spawn.pp.ua, domain:xbdfgdf.link, domain:apweb.vip, domain:trs.my.to, domain:creatio.com, domain:terrasoft.com, domain:rootu.top, domain:tmdbapi.rootu.top, domain:jacred.viewbox.dev, domain:vsassets.io, geosite:tmdb, geosite:kinopub, geosite:reddit, geosite:openai, geosite:tiktok, geosite:roblox, geosite:github) -> proxy
+
+# fallback direct TLDs: kept last so explicit proxy categories win first
+domain(regexp:.*\.ru$, regexp:.*\.su$, regexp:.*\.xn--p1ai$) -> direct

@@ -1,0 +1,8 @@
+build/
+rules/local.private.json
+dist-private/
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp
+*.bak

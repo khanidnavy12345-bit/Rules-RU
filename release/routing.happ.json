@@ -1,0 +1,70 @@
+{
+  "name": "Trix Direct Compact",
+  "globalProxy": false,
+  "routeOrder": "block-proxy-direct",
+  "domainStrategy": "IPIfNonMatch",
+  "remoteDNSType": "DoH",
+  "remoteDNSDomain": "https://dns.adguard-dns.com/dns-query",
+  "remoteDNSIP": "94.140.14.14",
+  "domesticDNSType": "DoH",
+  "domesticDNSDomain": "https://dns.quad9.net/dns-query",
+  "domesticDNSIP": "9.9.9.9",
+  "geoipUrl": "https://raw.githubusercontent.com/khanidnavy12345-bit/Rules-RU/main/release/geoip.dat",
+  "geositeUrl": "https://raw.githubusercontent.com/khanidnavy12345-bit/Rules-RU/main/release/geosite.dat",
+  "directSites": [
+    "geosite:yandex",
+    "geosite:ru-available-only-inside",
+    "geosite:alibaba",
+    "regexp:.*\\.ru$",
+    "regexp:.*\\.su$",
+    "regexp:.*\\.xn--p1ai$"
+  ],
+  "directIp": [
+    "geoip:yandex"
+  ],
+  "proxySites": [
+    "geosite:cloudflare",
+    "geosite:telegram",
+    "geosite:meta",
+    "geosite:youtube",
+    "geosite:google",
+    "geosite:steam",
+    "geosite:antifilter-download-community",
+    "geosite:ru-blocked",
+    "domain:lampa.stream",
+    "domain:jacred.xyz",
+    "domain:spawn.pp.ua",
+    "domain:xbdfgdf.link",
+    "domain:apweb.vip",
+    "domain:trs.my.to",
+    "domain:creatio.com",
+    "domain:terrasoft.com",
+    "domain:rootu.top",
+    "domain:tmdbapi.rootu.top",
+    "domain:jacred.viewbox.dev",
+    "domain:vsassets.io",
+    "geosite:tmdb",
+    "geosite:kinopub",
+    "geosite:reddit",
+    "geosite:openai",
+    "geosite:tiktok",
+    "geosite:roblox",
+    "geosite:github"
+  ],
+  "proxyIp": [
+    "geoip:cloudflare",
+    "geoip:cloudfront",
+    "geoip:telegram",
+    "geoip:facebook",
+    "geoip:google",
+    "geoip:ru-blocked"
+  ],
+  "blockSites": [
+    "geosite:win-spy",
+    "geosite:category-ads"
+  ],
+  "blockIp": [],
+  "dnsHosts": {},
+  "fakeDnsEnable": false,
+  "useChunkFiles": false
+}

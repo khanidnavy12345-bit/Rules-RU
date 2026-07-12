@@ -72,8 +72,7 @@
     ],
     "proxyBeforeDirectSites": [
       "geosite:ru-blocked",
-      "geosite:antifilter-download-community",
-      "geosite:steam"
+      "geosite:antifilter-download-community"
     ]
   },
   "block": {
@@ -87,7 +86,8 @@
       "geosite:ru-available-only-inside",
       "regexp:.*\\.su$",
       "regexp:.*\\.xn--p1ai$",
-      "geosite:alibaba"
+      "geosite:alibaba",
+      "geosite:steam"
     ],
     "ips": ["geoip:yandex"]
   },
@@ -108,7 +108,6 @@
       "geosite:kinopub",
       "geosite:tiktok",
       "geosite:roblox",
-      "geosite:steam",
       "domain:lampa.stream",
       "domain:jacred.xyz",
       "domain:spawn.pp.ua",

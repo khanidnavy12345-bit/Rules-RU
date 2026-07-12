@@ -36,11 +36,11 @@ domain(geosite:youtube, geosite:google) -> proxy
 ip(geoip:google) -> proxy
 
 # proxy before broad direct: categories that contain RU/SU/RF or blocked domains
-domain(geosite:steam, geosite:antifilter-download-community, geosite:ru-blocked) -> proxy
+domain(geosite:antifilter-download-community, geosite:ru-blocked) -> proxy
 ip(geoip:ru-blocked) -> proxy
 
 # direct from subscription: exact categories before broad TLD fallback
-domain(geosite:ru-available-only-inside, geosite:alibaba) -> direct
+domain(geosite:steam, geosite:ru-available-only-inside, geosite:alibaba) -> direct
 
 # proxy after broad direct: non-RU service categories and exact custom domains
 domain(domain:lampa.stream, domain:jacred.xyz, domain:spawn.pp.ua, domain:xbdfgdf.link, domain:apweb.vip, domain:trs.my.to, domain:creatio.com, domain:terrasoft.com, domain:rootu.top, domain:tmdbapi.rootu.top, domain:jacred.viewbox.dev, domain:vsassets.io, geosite:tmdb, geosite:kinopub, geosite:reddit, geosite:openai, geosite:tiktok, geosite:roblox, geosite:github) -> proxy

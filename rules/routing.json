@@ -82,13 +82,18 @@
         "ips": []
       },
       {
+        "comment": "fast path: AliExpress images CDN",
+        "target": "proxy",
+        "domains": ["domain:aliexpress-media.com"],
+        "ips": []
+      },
+      {
         "comment": "fast path: AliExpress/Alibaba CDN",
         "target": "direct",
         "domains": [
           "geosite:alibaba",
           "domain:aliexpress.com",
           "domain:alicdn.com",
-          "domain:aliexpress-media.com",
           "domain:aliyuncs.com"
         ],
         "ips": []

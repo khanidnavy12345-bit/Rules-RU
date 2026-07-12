@@ -40,8 +40,11 @@ domain(domain:dota2.com, domain:steamserver.net, domain:valve.net) -> direct
 # fast path: Steam
 domain(geosite:steam) -> direct
 
+# fast path: AliExpress images CDN
+domain(domain:aliexpress-media.com) -> proxy
+
 # fast path: AliExpress/Alibaba CDN
-domain(geosite:alibaba, domain:aliexpress.com, domain:alicdn.com, domain:aliexpress-media.com, domain:aliyuncs.com) -> direct
+domain(geosite:alibaba, domain:aliexpress.com, domain:alicdn.com, domain:aliyuncs.com) -> direct
 
 # proxy before broad direct: categories that contain RU/SU/RF or blocked domains
 domain(geosite:antifilter-download-community, geosite:ru-blocked) -> proxy

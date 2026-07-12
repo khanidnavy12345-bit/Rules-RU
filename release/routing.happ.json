@@ -13,6 +13,9 @@
   "geositeUrl": "https://raw.githubusercontent.com/khanidnavy12345-bit/Rules-RU/main/release/geosite.dat",
   "directSites": [
     "geosite:yandex",
+    "domain:dota2.com",
+    "domain:steamserver.net",
+    "domain:valve.net",
     "geosite:ru-available-only-inside",
     "geosite:alibaba",
     "regexp:.*\\.ru$",
@@ -25,6 +28,7 @@
   "proxySites": [
     "geosite:cloudflare",
     "geosite:telegram",
+    "geosite:discord",
     "geosite:meta",
     "geosite:youtube",
     "geosite:google",

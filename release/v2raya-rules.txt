@@ -21,6 +21,12 @@ ip(geoip:yandex) -> direct
 domain(geosite:telegram) -> proxy
 ip(geoip:telegram) -> proxy
 
+# fast path: Discord
+domain(geosite:discord) -> proxy
+
+# fast path: Dota game services
+domain(domain:dota2.com, domain:steamserver.net, domain:valve.net) -> direct
+
 # fast path: Instagram/Meta
 domain(geosite:meta) -> proxy
 ip(geoip:facebook) -> proxy

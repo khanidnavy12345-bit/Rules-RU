@@ -42,6 +42,22 @@
         "ips": ["geoip:telegram"]
       },
       {
+        "comment": "fast path: Discord",
+        "target": "proxy",
+        "domains": ["geosite:discord"],
+        "ips": []
+      },
+      {
+        "comment": "fast path: Dota game services",
+        "target": "direct",
+        "domains": [
+          "domain:dota2.com",
+          "domain:steamserver.net",
+          "domain:valve.net"
+        ],
+        "ips": []
+      },
+      {
         "comment": "fast path: Instagram/Meta",
         "target": "proxy",
         "domains": ["geosite:meta"],
@@ -78,6 +94,7 @@
   "proxy": {
     "sites": [
       "geosite:telegram",
+      "geosite:discord",
       "geosite:cloudflare",
       "geosite:meta",
       "geosite:youtube",

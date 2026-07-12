@@ -19,6 +19,12 @@
   },
   "udpPolicy": {
     "blockUdp443": true,
+    "proxyPortRanges": [
+      {
+        "comment": "Discord voice UDP",
+        "ports": "50000-65535"
+      }
+    ],
     "directOtherUdp": true
   },
   "routingHints": {

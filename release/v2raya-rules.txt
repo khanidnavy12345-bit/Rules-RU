@@ -7,6 +7,8 @@ domain(geosite:win-spy, geosite:category-ads) -> block
 # local/direct exceptions kept from current OpenWrt setup
 # block QUIC / UDP 443 so TCP-only VLESS Reality handles HTTPS
 network(udp) && port(443) -> block
+# Discord voice UDP
+network(udp) && port(50000-65535) -> proxy
 network(udp) -> direct
 
 # fast path: Cloudflare/CDN

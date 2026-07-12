@@ -17,8 +17,12 @@
     "domain:steamserver.net",
     "domain:valve.net",
     "geosite:steam",
-    "geosite:ru-available-only-inside",
     "geosite:alibaba",
+    "domain:aliexpress.com",
+    "domain:alicdn.com",
+    "domain:aliexpress-media.com",
+    "domain:aliyuncs.com",
+    "geosite:ru-available-only-inside",
     "regexp:.*\\.ru$",
     "regexp:.*\\.su$",
     "regexp:.*\\.xn--p1ai$"

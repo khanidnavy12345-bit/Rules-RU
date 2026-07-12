@@ -48,16 +48,6 @@
         "ips": []
       },
       {
-        "comment": "fast path: Dota game services",
-        "target": "direct",
-        "domains": [
-          "domain:dota2.com",
-          "domain:steamserver.net",
-          "domain:valve.net"
-        ],
-        "ips": []
-      },
-      {
         "comment": "fast path: Instagram/Meta",
         "target": "proxy",
         "domains": ["geosite:meta"],
@@ -68,6 +58,34 @@
         "target": "proxy",
         "domains": ["geosite:youtube", "geosite:google"],
         "ips": ["geoip:google"]
+      },
+      {
+        "comment": "fast path: Dota game services",
+        "target": "direct",
+        "domains": [
+          "domain:dota2.com",
+          "domain:steamserver.net",
+          "domain:valve.net"
+        ],
+        "ips": []
+      },
+      {
+        "comment": "fast path: Steam",
+        "target": "direct",
+        "domains": ["geosite:steam"],
+        "ips": []
+      },
+      {
+        "comment": "fast path: AliExpress/Alibaba CDN",
+        "target": "direct",
+        "domains": [
+          "geosite:alibaba",
+          "domain:aliexpress.com",
+          "domain:alicdn.com",
+          "domain:aliexpress-media.com",
+          "domain:aliyuncs.com"
+        ],
+        "ips": []
       }
     ],
     "proxyBeforeDirectSites": [

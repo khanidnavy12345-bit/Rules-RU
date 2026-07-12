@@ -24,9 +24,6 @@ ip(geoip:telegram) -> proxy
 # fast path: Discord
 domain(geosite:discord) -> proxy
 
-# fast path: Dota game services
-domain(domain:dota2.com, domain:steamserver.net, domain:valve.net) -> direct
-
 # fast path: Instagram/Meta
 domain(geosite:meta) -> proxy
 ip(geoip:facebook) -> proxy
@@ -35,12 +32,21 @@ ip(geoip:facebook) -> proxy
 domain(geosite:youtube, geosite:google) -> proxy
 ip(geoip:google) -> proxy
 
+# fast path: Dota game services
+domain(domain:dota2.com, domain:steamserver.net, domain:valve.net) -> direct
+
+# fast path: Steam
+domain(geosite:steam) -> direct
+
+# fast path: AliExpress/Alibaba CDN
+domain(geosite:alibaba, domain:aliexpress.com, domain:alicdn.com, domain:aliexpress-media.com, domain:aliyuncs.com) -> direct
+
 # proxy before broad direct: categories that contain RU/SU/RF or blocked domains
 domain(geosite:antifilter-download-community, geosite:ru-blocked) -> proxy
 ip(geoip:ru-blocked) -> proxy
 
 # direct from subscription: exact categories before broad TLD fallback
-domain(geosite:steam, geosite:ru-available-only-inside, geosite:alibaba) -> direct
+domain(geosite:ru-available-only-inside) -> direct
 
 # proxy after broad direct: non-RU service categories and exact custom domains
 domain(domain:lampa.stream, domain:jacred.xyz, domain:spawn.pp.ua, domain:xbdfgdf.link, domain:apweb.vip, domain:trs.my.to, domain:creatio.com, domain:terrasoft.com, domain:rootu.top, domain:tmdbapi.rootu.top, domain:jacred.viewbox.dev, domain:vsassets.io, geosite:tmdb, geosite:kinopub, geosite:reddit, geosite:openai, geosite:tiktok, geosite:roblox, geosite:github) -> proxy

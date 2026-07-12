@@ -191,6 +191,7 @@ def build_routing_a(rules, stats=None):
     if rules["udpPolicy"].get("blockUdp443"):
         lines += ["# block QUIC / UDP 443 so TCP-only VLESS Reality handles HTTPS"]
         lines += ["network(udp) && port(443) -> block"]
+    lines += lines_for_rule("ip", rules["udpPolicy"].get("proxyIpsBeforeDirectUdp", []), "proxy")
     for group in rules["udpPolicy"].get("proxyPortRanges", []):
         lines += [f"# {group.get('comment', 'selected UDP ports through proxy')}"]
         lines += [f"network(udp) && port({group['ports']}) -> proxy"]

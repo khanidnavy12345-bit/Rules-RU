@@ -70,6 +70,12 @@
         "ips": ["geoip:google"]
       },
       {
+        "comment": "fast path: Claude/Anthropic",
+        "target": "proxy",
+        "domains": ["geosite:anthropic"],
+        "ips": []
+      },
+      {
         "comment": "fast path: Dota game services",
         "target": "direct",
         "domains": [
@@ -137,6 +143,7 @@
       "geosite:ru-blocked",
       "geosite:antifilter-download-community",
       "geosite:openai",
+      "geosite:anthropic",
       "geosite:tmdb",
       "geosite:kinopub",
       "geosite:tiktok",

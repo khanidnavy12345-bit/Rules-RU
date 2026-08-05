@@ -118,6 +118,7 @@ def main():
         "ru-blocked",
         "antifilter-download-community",
         "openai",
+        "anthropic",
         "tmdb",
         "kinopub",
         "tiktok",

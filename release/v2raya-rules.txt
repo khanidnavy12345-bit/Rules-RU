@@ -35,6 +35,9 @@ ip(geoip:facebook) -> proxy
 domain(geosite:youtube, geosite:google) -> proxy
 ip(geoip:google) -> proxy
 
+# fast path: Claude/Anthropic
+domain(geosite:anthropic) -> proxy
+
 # fast path: Dota game services
 domain(domain:dota2.com, domain:steamserver.net, domain:valve.net) -> direct
 

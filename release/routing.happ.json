@@ -36,6 +36,7 @@
     "geosite:meta",
     "geosite:youtube",
     "geosite:google",
+    "geosite:anthropic",
     "domain:aliexpress-media.com",
     "geosite:antifilter-download-community",
     "geosite:ru-blocked",

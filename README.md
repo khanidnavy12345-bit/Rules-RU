@@ -8,7 +8,7 @@ Key features:
 - Compact geodata: only categories referenced by the rules are copied into the published `.dat` files.
 - No `ext:` files: clients only need the standard `geosite.dat` and `geoip.dat` pair.
 - Deterministic rule order: explicit blocked/proxy categories win before broad direct fallbacks such as `.ru`, `.su`, and `.xn--p1ai`.
-- Fast-path ordering for common services such as Cloudflare, Yandex, Telegram, Meta/Instagram, YouTube, and Google.
+- Fast-path ordering for common services such as Yandex, Telegram, Meta/Instagram, YouTube, and Google.
 - Rule item ordering based on category size, so smaller checks are placed before larger geosite/geoip groups where this is safe.
 - HAPP import link generation for clients that support `happ://routing/add/...`, including 3x-ui-style HAPP link usage.
 - Router-side private exceptions, so personal proxy server addresses can stay on the router and never appear in public GitHub releases.

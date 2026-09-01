@@ -30,7 +30,6 @@
     "geoip:yandex"
   ],
   "proxySites": [
-    "geosite:cloudflare",
     "geosite:telegram",
     "geosite:discord",
     "geosite:meta",
@@ -61,8 +60,6 @@
     "geosite:github"
   ],
   "proxyIp": [
-    "geoip:cloudflare",
-    "geoip:cloudfront",
     "geoip:telegram",
     "geoip:facebook",
     "geoip:google",

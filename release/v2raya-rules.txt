@@ -8,13 +8,7 @@ domain(geosite:win-spy, geosite:category-ads) -> block
 # block QUIC / UDP 443 so TCP-only VLESS Reality handles HTTPS
 network(udp) && port(443) -> block
 ip(111.111.111.111, 111.111.111.112) -> proxy
-# Discord voice UDP
-network(udp) && port(50000-65535) -> proxy
 network(udp) -> direct
-
-# fast path: Cloudflare/CDN
-domain(geosite:cloudflare) -> proxy
-ip(geoip:cloudflare, geoip:cloudfront) -> proxy
 
 # fast path: Yandex
 domain(geosite:yandex) -> direct

@@ -23,22 +23,11 @@
       "111.111.111.111",
       "111.111.111.112"
     ],
-    "proxyPortRanges": [
-      {
-        "comment": "Discord voice UDP",
-        "ports": "50000-65535"
-      }
-    ],
+    "proxyPortRanges": [],
     "directOtherUdp": true
   },
   "routingHints": {
     "fastPath": [
-      {
-        "comment": "fast path: Cloudflare/CDN",
-        "target": "proxy",
-        "domains": ["geosite:cloudflare"],
-        "ips": ["geoip:cloudflare", "geoip:cloudfront"]
-      },
       {
         "comment": "fast path: Yandex",
         "target": "direct",
@@ -134,7 +123,6 @@
     "sites": [
       "geosite:telegram",
       "geosite:discord",
-      "geosite:cloudflare",
       "geosite:meta",
       "geosite:youtube",
       "geosite:google",
@@ -163,8 +151,6 @@
     ],
     "ips": [
       "geoip:telegram",
-      "geoip:cloudflare",
-      "geoip:cloudfront",
       "geoip:facebook",
       "geoip:google",
       "geoip:ru-blocked"

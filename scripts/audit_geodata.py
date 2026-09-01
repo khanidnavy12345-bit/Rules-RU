@@ -109,7 +109,6 @@ def main():
     direct = ["yandex", "ru-available-only-inside", "alibaba"]
     proxy = [
         "telegram",
-        "cloudflare",
         "meta",
         "youtube",
         "google",
